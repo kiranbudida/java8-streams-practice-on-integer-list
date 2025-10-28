@@ -466,6 +466,24 @@ int sumEven5 = numbers.stream()
                       .reduce(0, Integer::sum);
 System.out.println(sumEven5);
 // Output: 36
+
+//Alternative
+int altSumEven5 =  numbers.stream()
+       .filter(n->n%2==0)
+       .limit(5)
+       .reduce(0, (a,b)->a+b);
+System.out.println(altSumEven5);
+// Output: 36
+
+//Another Alternative
+int anotherAltSumEven5 = numbers.stream()
+       .filter(n->n%2==0)
+       .limit(5)
+       .mapToInt(Integer::intValue)
+       .sum();
+System.out.println(anotherAltSumEven5);
+// Output: 36
+
 ```
 
 ---
