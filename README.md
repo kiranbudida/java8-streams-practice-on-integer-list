@@ -427,7 +427,7 @@ int sumSquaresEven = numbers.stream()
                             .map(n -> n * n)
                             .reduce(0, Integer::sum);
 System.out.println(sumSquaresEven);
-// Output: 360
+// Output: 364
 ```
 
 ---
